@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="case_db.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1248"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="dim_entregadores" custom_title="0" dock_id="1" table="4,16:maindim_entregadores"/><dock_state state="000000ff00000000fd0000000100000002000004d40000030efc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000004d40000012400ffffff000002630000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="dim_entregadores" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="87"/><column index="2" value="117"/><column index="3" value="48"/><column index="4" value="88"/><column index="5" value="118"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="dim_missoes" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="64"/><column index="2" value="109"/><column index="3" value="142"/><column index="4" value="76"/><column index="5" value="54"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="dim_semana" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="69"/><column index="2" value="85"/><column index="3" value="85"/><column index="4" value="70"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="fato_atividade_semanal" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="87"/><column index="2" value="69"/><column index="3" value="120"/><column index="4" value="80"/><column index="5" value="101"/><column index="6" value="91"/><column index="7" value="46"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="fato_incentivos" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="87"/><column index="2" value="69"/><column index="3" value="64"/><column index="4" value="89"/><column index="5" value="76"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">-- =========================================================
+-- Case: Programa de Missões (Gamificação) para Entregadores
+
+-- =========================================================
+
+DROP TABLE IF EXISTS fato_incentivos;
+DROP TABLE IF EXISTS fato_atividade_semanal;
+DROP TABLE IF EXISTS dim_missoes;
+DROP TABLE IF EXISTS dim_semana;
+DROP TABLE IF EXISTS dim_entregadores;
+
+CREATE TABLE dim_entregadores (
+    entregador_id       INTEGER PRIMARY KEY,
+    cidade               VARCHAR(50),
+    veiculo              VARCHAR(20),
+    data_cadastro        DATE,
+    grupo_experimento    VARCHAR(20)  -- 'controle' ou 'tratamento'
+);
+
+CREATE TABLE dim_semana (
+    semana_id     INTEGER PRIMARY KEY,
+    data_inicio   DATE,
+    data_fim      DATE,
+    fase          VARCHAR(20)  -- 'baseline' ou 'programa'
+);
+
+CREATE TABLE dim_missoes (
+    missao_id             INTEGER PRIMARY KEY,
+    nome_missao           VARCHAR(50),
+    meta_entregas_semana  INTEGER,
+    bonus_reais           NUMERIC(10,2),
+    tier                  VARCHAR(20)
+);
+
+CREATE TABLE fato_atividade_semanal (
+    entregador_id        INTEGER REFERENCES dim_entregadores(entregador_id),
+    semana_id            INTEGER REFERENCES dim_semana(semana_id),
+    entregas_realizadas  INTEGER,
+    horas_online          NUMERIC(6,1),
+    avaliacao_media       NUMERIC(3,2),
+    cancelamentos         INTEGER,
+    ativo                 BOOLEAN,
+    PRIMARY KEY (entregador_id, semana_id)
+);
+
+CREATE TABLE fato_incentivos (
+    entregador_id   INTEGER REFERENCES dim_entregadores(entregador_id),
+    semana_id       INTEGER REFERENCES dim_semana(semana_id),
+    missao_id       INTEGER REFERENCES dim_missoes(missao_id),
+    meta_atingida   BOOLEAN,
+    bonus_pago      NUMERIC(10,2)
+);
+
+
+
+
+
+ </sql><sql name="SQL 2*">DROP TABLE dim_entregadores;
+
+SELECT COUNT(*) FROM dim_entregadores;
+
+
+DROP TABLE dim_semana;
+SELECT COUNT(*) FROM dim_semana;
+
+SELECT COUNT(*) FROM dim_missoes;
+
+SELECT COUNT(*) FROM fato_atividade_semanal;
+
+SELECT COUNT(*) FROM fato_incentivos;</sql><sql name="01*">-- 1) Entregas médias por semana, por grupo experimental
+--    (primeiro passo pra visualizar o diff-in-diff)
+SELECT
+    s.semana_id,
+    s.fase,
+    e.grupo_experimento,
+    AVG(a.entregas_realizadas) AS entregas_media,
+    COUNT(DISTINCT a.entregador_id) AS entregadores
+FROM fato_atividade_semanal a
+JOIN dim_entregadores e ON e.entregador_id = a.entregador_id
+JOIN dim_semana s ON s.semana_id = a.semana_id
+GROUP BY s.semana_id, s.fase, e.grupo_experimento
+ORDER BY s.semana_id, e.grupo_experimento;</sql><sql name="02*">-- 2) Retenção semanal por grupo (quantos seguiam ativos)
+SELECT
+    s.fase,
+    e.grupo_experimento,
+    AVG(CASE WHEN a.ativo THEN 1.0 ELSE 0 END) AS taxa_ativos
+FROM fato_atividade_semanal a
+JOIN dim_entregadores e ON e.entregador_id = a.entregador_id
+JOIN dim_semana s ON s.semana_id = a.semana_id
+GROUP BY s.fase, e.grupo_experimento;</sql><sql name="03*">-- 3) Custo total do programa (bônus pago) por semana
+SELECT
+    s.semana_id,
+    SUM(i.bonus_pago) AS custo_bonus,
+    COUNT(DISTINCT CASE WHEN i.meta_atingida THEN i.entregador_id END) AS entregadores_premiados
+FROM fato_incentivos i
+JOIN dim_semana s ON s.semana_id = i.semana_id
+GROUP BY s.semana_id
+ORDER BY s.semana_id;</sql><sql name="04*">-- 4) Ponto de partida pra taxa de conclusão por tier de missão
+--    (você vai precisar completar isso pra responder:
+--    &quot;a missão Ouro é fácil demais ou difícil demais?&quot;)
+SELECT
+    m.tier,
+    m.meta_entregas_semana,
+    COUNT(*) AS vezes_escolhida,
+    AVG(CASE WHEN i.meta_atingida THEN 1.0 ELSE 0 END) AS taxa_conclusao
+FROM fato_incentivos i
+JOIN dim_missoes m ON m.missao_id = i.missao_id
+GROUP BY m.tier, m.meta_entregas_semana;</sql><sql name="05*">-- 5) ROI do programa: (receita incremental gerada pelas
+--    entregas extras do grupo tratamento) vs (custo total
+--    de bônus pago). Use RECEITA_MEDIA_POR_ENTREGA = R$ 6,80
+--    por entrega (fica documentado no dicionário de dados).
+WITH entregas_incrementais AS (
+    SELECT
+        (AVG(CASE WHEN e.grupo_experimento = 'tratamento' AND s.fase = 'programa' THEN a.entregas_realizadas END) -
+         AVG(CASE WHEN e.grupo_experimento = 'tratamento' AND s.fase = 'baseline' THEN a.entregas_realizadas END))
+        * (SELECT COUNT(*) FROM dim_entregadores WHERE grupo_experimento = 'tratamento')
+        * (SELECT COUNT(*) FROM dim_semana WHERE fase = 'programa')
+        AS entregas_extra
+    FROM fato_atividade_semanal a
+    JOIN dim_semana s ON s.semana_id = a.semana_id
+    JOIN dim_entregadores e ON e.entregador_id = a.entregador_id
+),
+custo AS (
+    SELECT SUM(bonus_pago) AS custo_total FROM fato_incentivos
+)
+SELECT
+    entregas_extra,
+    entregas_extra * 6.80 AS receita_incremental,
+    custo.custo_total,
+    (entregas_extra * 6.80) - custo.custo_total AS lucro_incremental,
+    (entregas_extra * 6.80) / custo.custo_total AS roi
+FROM entregas_incrementais, custo;</sql><sql name="06*">WITH medias AS (
+    SELECT
+        e.grupo_experimento,
+        s.fase,
+        AVG(a.entregas_realizadas) AS entrega_media
+    FROM fato_atividade_semanal a
+    JOIN dim_semana s ON s.semana_id = a.semana_id
+    JOIN dim_entregadores e ON e.entregador_id = a.entregador_id
+    GROUP BY e.grupo_experimento, s.fase
+)
+SELECT
+    (MAX(CASE WHEN grupo_experimento = 'tratamento' AND fase = 'programa' THEN entrega_media END) -
+     MAX(CASE WHEN grupo_experimento = 'tratamento' AND fase = 'baseline' THEN entrega_media END))
+    -
+    (MAX(CASE WHEN grupo_experimento = 'controle' AND fase = 'programa' THEN entrega_media END) -
+     MAX(CASE WHEN grupo_experimento = 'controle' AND fase = 'baseline' THEN entrega_media END))
+    AS efeito_diff_in_diff
+FROM medias;</sql><sql name="identificar o true e false*">UPDATE fato_atividade_semanal
+SET ativo = CASE WHEN ativo = 'True' THEN 1 ELSE 0 END;
+
+UPDATE fato_incentivos
+SET meta_atingida = CASE WHEN meta_atingida = 'True' THEN 1 ELSE 0 END;sss</sql><sql name="verificar apenas a coluna ativo*">SELECT ativo, COUNT(*) FROM fato_atividade_semanal GROUP BY ativo;</sql><current_tab id="7"/></tab_sql></sqlb_project>

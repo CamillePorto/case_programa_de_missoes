@@ -1,0 +1,4 @@
+missao_id,nome_missao,meta_entregas_semana,bonus_reais,tier
+1,Missão Bronze,25,40,Bronze
+2,Missão Prata,40,90,Prata
+3,Missão Ouro,55,160,Ouro

@@ -1,0 +1,401 @@
+entregador_id,cidade,veiculo,data_cadastro,grupo_experimento
+1,Rio de Janeiro,Bike,2024-01-05,tratamento
+2,Curitiba,Moto,2025-01-31,controle
+3,Salvador,Carro,2025-06-06,tratamento
+4,São Paulo,Bike,2025-01-20,tratamento
+5,Curitiba,Moto,2024-09-25,controle
+6,Recife,Moto,2025-08-02,tratamento
+7,São Paulo,Bike,2024-09-16,tratamento
+8,Recife,Moto,2025-05-12,tratamento
+9,São Paulo,Moto,2024-11-20,controle
+10,Curitiba,Carro,2024-01-19,controle
+11,Salvador,Moto,2025-01-06,controle
+12,Salvador,Moto,2024-02-04,tratamento
+13,São Paulo,Carro,2025-10-13,tratamento
+14,Recife,Bike,2025-02-25,tratamento
+15,São Paulo,Moto,2024-09-17,controle
+16,São Paulo,Carro,2024-12-06,controle
+17,São Paulo,Carro,2025-03-09,tratamento
+18,Salvador,Moto,2024-07-01,controle
+19,São Paulo,Bike,2024-07-20,tratamento
+20,Curitiba,Moto,2024-10-20,tratamento
+21,Salvador,Moto,2024-06-30,tratamento
+22,São Paulo,Bike,2025-06-14,controle
+23,São Paulo,Moto,2024-03-13,tratamento
+24,São Paulo,Bike,2025-08-01,tratamento
+25,Belo Horizonte,Bike,2024-08-31,tratamento
+26,Recife,Moto,2025-01-27,controle
+27,São Paulo,Bike,2024-04-20,controle
+28,Recife,Moto,2024-09-26,controle
+29,São Paulo,Carro,2025-06-12,controle
+30,Recife,Moto,2024-07-08,tratamento
+31,Curitiba,Bike,2024-04-02,tratamento
+32,Salvador,Bike,2024-12-31,tratamento
+33,Salvador,Moto,2024-04-23,controle
+34,Recife,Bike,2024-08-08,controle
+35,São Paulo,Bike,2024-11-11,controle
+36,São Paulo,Bike,2025-01-29,controle
+37,São Paulo,Bike,2025-03-23,controle
+38,Belo Horizonte,Carro,2025-04-18,controle
+39,Salvador,Moto,2025-08-14,controle
+40,Belo Horizonte,Moto,2024-02-16,tratamento
+41,Recife,Moto,2024-09-10,controle
+42,São Paulo,Bike,2024-01-01,tratamento
+43,Salvador,Moto,2024-01-07,tratamento
+44,São Paulo,Moto,2024-05-28,controle
+45,São Paulo,Moto,2025-02-22,tratamento
+46,Salvador,Carro,2025-09-18,tratamento
+47,Curitiba,Moto,2025-06-25,controle
+48,Belo Horizonte,Bike,2025-03-28,controle
+49,São Paulo,Moto,2025-06-28,tratamento
+50,Belo Horizonte,Carro,2024-04-30,controle
+51,São Paulo,Moto,2025-08-10,controle
+52,Recife,Moto,2025-09-15,controle
+53,Salvador,Carro,2024-03-07,tratamento
+54,São Paulo,Carro,2024-11-24,tratamento
+55,São Paulo,Moto,2025-08-04,tratamento
+56,São Paulo,Moto,2024-11-29,tratamento
+57,Curitiba,Bike,2025-08-11,controle
+58,Rio de Janeiro,Carro,2025-10-16,tratamento
+59,Salvador,Moto,2024-11-28,controle
+60,Belo Horizonte,Moto,2024-02-11,controle
+61,Belo Horizonte,Bike,2024-08-26,tratamento
+62,São Paulo,Bike,2024-05-30,controle
+63,Curitiba,Bike,2024-11-27,tratamento
+64,Rio de Janeiro,Bike,2025-02-14,tratamento
+65,Belo Horizonte,Moto,2024-11-20,tratamento
+66,Salvador,Carro,2024-05-16,tratamento
+67,Belo Horizonte,Carro,2024-07-29,tratamento
+68,Curitiba,Bike,2025-04-20,controle
+69,São Paulo,Moto,2024-01-19,controle
+70,Belo Horizonte,Moto,2024-05-29,controle
+71,Rio de Janeiro,Bike,2025-09-16,controle
+72,Rio de Janeiro,Moto,2024-03-10,controle
+73,São Paulo,Carro,2024-10-17,tratamento
+74,São Paulo,Moto,2024-05-24,controle
+75,São Paulo,Bike,2024-03-14,controle
+76,Rio de Janeiro,Carro,2024-10-22,controle
+77,Rio de Janeiro,Moto,2024-12-31,controle
+78,Belo Horizonte,Moto,2024-05-03,tratamento
+79,Belo Horizonte,Bike,2024-02-24,tratamento
+80,Rio de Janeiro,Bike,2024-04-04,tratamento
+81,Rio de Janeiro,Moto,2025-04-01,tratamento
+82,São Paulo,Bike,2025-08-25,controle
+83,Belo Horizonte,Carro,2024-05-06,tratamento
+84,Rio de Janeiro,Moto,2024-08-12,controle
+85,São Paulo,Moto,2024-08-28,controle
+86,Rio de Janeiro,Moto,2024-09-09,controle
+87,Rio de Janeiro,Moto,2024-06-20,tratamento
+88,São Paulo,Moto,2024-02-08,controle
+89,Belo Horizonte,Moto,2025-01-02,controle
+90,Belo Horizonte,Bike,2024-09-07,tratamento
+91,Salvador,Moto,2024-08-27,controle
+92,Belo Horizonte,Carro,2024-07-04,tratamento
+93,Salvador,Moto,2025-10-12,controle
+94,Rio de Janeiro,Moto,2025-03-03,controle
+95,Salvador,Bike,2024-10-20,controle
+96,Belo Horizonte,Carro,2024-05-23,tratamento
+97,Rio de Janeiro,Moto,2025-07-14,controle
+98,Belo Horizonte,Moto,2025-09-13,controle
+99,Rio de Janeiro,Moto,2024-01-23,controle
+100,Belo Horizonte,Moto,2025-10-12,tratamento
+101,Salvador,Moto,2025-05-04,tratamento
+102,Recife,Moto,2024-03-10,tratamento
+103,Curitiba,Moto,2025-06-11,controle
+104,Belo Horizonte,Moto,2024-03-16,tratamento
+105,Belo Horizonte,Carro,2024-02-05,tratamento
+106,Salvador,Bike,2024-03-21,tratamento
+107,Rio de Janeiro,Moto,2024-11-17,controle
+108,Recife,Moto,2025-03-09,controle
+109,Rio de Janeiro,Moto,2024-10-12,controle
+110,São Paulo,Moto,2024-03-26,tratamento
+111,São Paulo,Bike,2024-05-19,controle
+112,Recife,Carro,2025-08-19,controle
+113,São Paulo,Carro,2025-11-04,controle
+114,São Paulo,Carro,2025-06-11,tratamento
+115,Rio de Janeiro,Carro,2024-03-13,controle
+116,São Paulo,Carro,2025-07-27,tratamento
+117,Rio de Janeiro,Moto,2025-04-29,tratamento
+118,Salvador,Moto,2025-01-03,tratamento
+119,São Paulo,Moto,2024-04-10,controle
+120,Recife,Bike,2025-11-28,tratamento
+121,Recife,Moto,2024-11-05,tratamento
+122,Rio de Janeiro,Bike,2024-01-31,tratamento
+123,São Paulo,Bike,2024-05-26,controle
+124,Belo Horizonte,Moto,2024-10-07,controle
+125,São Paulo,Moto,2024-02-13,controle
+126,Rio de Janeiro,Moto,2024-08-14,controle
+127,Curitiba,Moto,2024-11-23,controle
+128,Curitiba,Carro,2025-10-26,controle
+129,Salvador,Bike,2024-03-01,controle
+130,Rio de Janeiro,Bike,2025-02-07,tratamento
+131,Salvador,Moto,2025-10-03,controle
+132,Salvador,Moto,2025-07-18,tratamento
+133,Rio de Janeiro,Moto,2025-10-09,tratamento
+134,Belo Horizonte,Bike,2024-04-29,controle
+135,São Paulo,Bike,2025-07-14,tratamento
+136,São Paulo,Moto,2025-11-16,controle
+137,Belo Horizonte,Carro,2024-08-16,tratamento
+138,São Paulo,Moto,2024-12-15,controle
+139,São Paulo,Carro,2025-01-06,tratamento
+140,Recife,Moto,2024-12-11,controle
+141,Curitiba,Moto,2024-07-21,controle
+142,Belo Horizonte,Bike,2025-11-10,controle
+143,Recife,Moto,2025-10-31,tratamento
+144,Curitiba,Moto,2024-09-23,tratamento
+145,São Paulo,Moto,2025-07-17,controle
+146,Rio de Janeiro,Moto,2024-10-05,controle
+147,Rio de Janeiro,Bike,2025-07-10,controle
+148,São Paulo,Carro,2025-02-13,tratamento
+149,Salvador,Carro,2024-11-25,controle
+150,Rio de Janeiro,Moto,2024-03-30,controle
+151,Rio de Janeiro,Moto,2025-04-03,tratamento
+152,São Paulo,Moto,2024-08-12,tratamento
+153,São Paulo,Moto,2024-05-31,controle
+154,Curitiba,Moto,2024-05-15,tratamento
+155,São Paulo,Carro,2025-11-18,controle
+156,São Paulo,Carro,2024-03-13,tratamento
+157,São Paulo,Bike,2025-07-12,controle
+158,Rio de Janeiro,Moto,2025-08-29,tratamento
+159,Belo Horizonte,Moto,2024-01-22,tratamento
+160,Rio de Janeiro,Moto,2025-02-16,tratamento
+161,São Paulo,Moto,2025-02-08,controle
+162,São Paulo,Moto,2024-09-08,tratamento
+163,Recife,Moto,2025-04-11,controle
+164,Belo Horizonte,Moto,2024-10-13,controle
+165,Belo Horizonte,Carro,2024-11-03,tratamento
+166,Salvador,Moto,2024-10-29,controle
+167,Salvador,Carro,2025-07-14,tratamento
+168,São Paulo,Moto,2025-03-19,tratamento
+169,Rio de Janeiro,Bike,2024-09-22,controle
+170,Belo Horizonte,Moto,2025-10-10,tratamento
+171,Rio de Janeiro,Moto,2025-07-15,controle
+172,Recife,Moto,2025-10-14,tratamento
+173,Rio de Janeiro,Moto,2025-05-26,controle
+174,Salvador,Carro,2024-10-01,tratamento
+175,Recife,Moto,2025-06-25,controle
+176,Belo Horizonte,Bike,2024-08-18,controle
+177,Curitiba,Moto,2024-07-08,controle
+178,Belo Horizonte,Moto,2024-11-11,tratamento
+179,Recife,Moto,2025-11-09,tratamento
+180,Rio de Janeiro,Moto,2025-02-01,tratamento
+181,Rio de Janeiro,Carro,2024-09-25,tratamento
+182,Belo Horizonte,Bike,2024-11-19,tratamento
+183,São Paulo,Bike,2024-07-22,tratamento
+184,Rio de Janeiro,Moto,2025-04-06,controle
+185,Curitiba,Moto,2024-09-02,tratamento
+186,Belo Horizonte,Carro,2025-01-23,tratamento
+187,São Paulo,Moto,2024-09-15,controle
+188,Rio de Janeiro,Moto,2024-08-12,controle
+189,São Paulo,Moto,2025-11-10,tratamento
+190,São Paulo,Bike,2024-08-30,controle
+191,Curitiba,Bike,2024-02-19,tratamento
+192,Rio de Janeiro,Bike,2024-09-22,controle
+193,Rio de Janeiro,Bike,2025-01-07,controle
+194,Belo Horizonte,Moto,2024-03-07,tratamento
+195,São Paulo,Carro,2024-08-01,controle
+196,São Paulo,Moto,2024-04-26,controle
+197,Salvador,Bike,2024-12-16,tratamento
+198,Belo Horizonte,Moto,2025-05-21,tratamento
+199,Curitiba,Carro,2025-11-08,controle
+200,Belo Horizonte,Moto,2024-09-29,controle
+201,Rio de Janeiro,Moto,2025-08-27,tratamento
+202,Salvador,Moto,2024-05-30,tratamento
+203,Curitiba,Moto,2025-06-30,tratamento
+204,Salvador,Moto,2025-01-28,controle
+205,Curitiba,Bike,2025-06-14,controle
+206,Salvador,Moto,2025-06-12,controle
+207,Recife,Carro,2025-01-07,controle
+208,São Paulo,Moto,2024-06-29,tratamento
+209,Salvador,Bike,2025-01-03,controle
+210,Rio de Janeiro,Moto,2025-08-01,tratamento
+211,Belo Horizonte,Bike,2025-11-10,tratamento
+212,Salvador,Bike,2025-10-11,tratamento
+213,Curitiba,Moto,2024-05-07,controle
+214,Curitiba,Carro,2025-02-22,tratamento
+215,São Paulo,Moto,2024-03-14,tratamento
+216,Salvador,Moto,2025-04-13,tratamento
+217,Salvador,Bike,2025-11-25,controle
+218,Rio de Janeiro,Bike,2024-02-06,controle
+219,São Paulo,Moto,2025-04-04,tratamento
+220,São Paulo,Moto,2025-10-23,controle
+221,Salvador,Carro,2025-08-16,controle
+222,Rio de Janeiro,Bike,2024-10-01,controle
+223,Curitiba,Carro,2024-03-13,tratamento
+224,Rio de Janeiro,Moto,2025-10-08,tratamento
+225,Curitiba,Bike,2025-10-06,controle
+226,Rio de Janeiro,Moto,2025-02-09,tratamento
+227,Salvador,Carro,2025-11-16,controle
+228,São Paulo,Moto,2024-01-04,tratamento
+229,Belo Horizonte,Bike,2025-03-07,tratamento
+230,Recife,Moto,2024-01-27,controle
+231,Curitiba,Bike,2025-10-16,controle
+232,Recife,Bike,2025-04-21,controle
+233,São Paulo,Moto,2025-10-01,tratamento
+234,Rio de Janeiro,Carro,2025-01-28,tratamento
+235,São Paulo,Moto,2024-02-28,tratamento
+236,São Paulo,Bike,2024-01-19,tratamento
+237,Salvador,Moto,2024-08-22,controle
+238,Salvador,Moto,2025-06-04,tratamento
+239,Salvador,Moto,2024-04-15,controle
+240,Recife,Moto,2025-08-19,controle
+241,Salvador,Moto,2024-06-16,tratamento
+242,Recife,Bike,2024-12-13,tratamento
+243,São Paulo,Bike,2024-05-22,controle
+244,São Paulo,Bike,2024-11-22,tratamento
+245,Belo Horizonte,Moto,2024-11-12,tratamento
+246,Recife,Moto,2024-01-04,tratamento
+247,São Paulo,Moto,2025-02-01,tratamento
+248,Belo Horizonte,Bike,2025-07-04,controle
+249,Salvador,Carro,2025-10-17,controle
+250,São Paulo,Moto,2024-08-19,controle
+251,Rio de Janeiro,Bike,2025-09-08,tratamento
+252,Recife,Moto,2025-09-07,tratamento
+253,Salvador,Moto,2025-11-22,controle
+254,São Paulo,Moto,2024-09-18,controle
+255,Recife,Moto,2025-08-18,controle
+256,Rio de Janeiro,Bike,2025-01-30,tratamento
+257,Recife,Carro,2024-02-10,tratamento
+258,São Paulo,Moto,2024-07-08,controle
+259,Belo Horizonte,Moto,2025-04-15,controle
+260,Rio de Janeiro,Bike,2024-04-22,tratamento
+261,São Paulo,Carro,2024-10-31,controle
+262,Recife,Bike,2025-06-26,tratamento
+263,São Paulo,Moto,2024-04-14,controle
+264,São Paulo,Bike,2024-12-13,controle
+265,Rio de Janeiro,Moto,2024-05-30,tratamento
+266,Salvador,Carro,2025-01-10,controle
+267,Recife,Moto,2024-06-17,controle
+268,Curitiba,Bike,2025-11-06,controle
+269,São Paulo,Moto,2024-02-23,controle
+270,Rio de Janeiro,Moto,2025-11-05,controle
+271,São Paulo,Carro,2025-07-08,controle
+272,Belo Horizonte,Bike,2025-08-21,controle
+273,Curitiba,Moto,2025-08-19,controle
+274,Salvador,Carro,2024-05-11,tratamento
+275,Belo Horizonte,Carro,2025-10-13,tratamento
+276,Rio de Janeiro,Moto,2025-02-19,controle
+277,Curitiba,Moto,2025-11-04,controle
+278,Rio de Janeiro,Moto,2025-09-06,tratamento
+279,São Paulo,Bike,2025-02-09,tratamento
+280,Rio de Janeiro,Moto,2024-09-19,tratamento
+281,São Paulo,Moto,2024-03-23,controle
+282,São Paulo,Carro,2024-03-11,controle
+283,São Paulo,Carro,2024-09-29,controle
+284,Rio de Janeiro,Bike,2025-07-21,controle
+285,Belo Horizonte,Carro,2024-12-19,tratamento
+286,Rio de Janeiro,Bike,2024-12-03,controle
+287,Rio de Janeiro,Bike,2024-06-20,controle
+288,Curitiba,Bike,2025-01-30,controle
+289,Salvador,Moto,2025-03-22,tratamento
+290,Belo Horizonte,Moto,2025-11-18,controle
+291,São Paulo,Moto,2025-05-25,tratamento
+292,Recife,Bike,2025-03-01,controle
+293,São Paulo,Moto,2025-09-29,tratamento
+294,Rio de Janeiro,Moto,2024-10-24,controle
+295,Curitiba,Bike,2025-10-16,tratamento
+296,Belo Horizonte,Moto,2024-09-15,tratamento
+297,Salvador,Moto,2024-03-30,tratamento
+298,Belo Horizonte,Bike,2024-10-19,tratamento
+299,Salvador,Carro,2024-03-31,tratamento
+300,São Paulo,Moto,2024-03-23,tratamento
+301,São Paulo,Moto,2025-09-08,tratamento
+302,Rio de Janeiro,Moto,2025-07-10,controle
+303,São Paulo,Bike,2024-06-03,tratamento
+304,Recife,Bike,2025-08-09,tratamento
+305,São Paulo,Moto,2024-02-18,tratamento
+306,Belo Horizonte,Bike,2024-07-18,controle
+307,Salvador,Moto,2025-05-09,controle
+308,Salvador,Moto,2024-07-31,tratamento
+309,Rio de Janeiro,Carro,2025-05-26,controle
+310,Rio de Janeiro,Moto,2025-09-04,controle
+311,Curitiba,Moto,2024-02-16,controle
+312,Salvador,Moto,2024-01-17,controle
+313,Recife,Bike,2025-10-20,controle
+314,Curitiba,Carro,2024-12-30,controle
+315,Salvador,Carro,2024-12-20,controle
+316,São Paulo,Moto,2024-11-20,controle
+317,Belo Horizonte,Moto,2024-10-30,controle
+318,São Paulo,Bike,2025-04-28,tratamento
+319,Salvador,Moto,2025-02-09,controle
+320,Curitiba,Carro,2024-04-24,tratamento
+321,Belo Horizonte,Bike,2025-03-14,tratamento
+322,Rio de Janeiro,Moto,2025-04-12,controle
+323,São Paulo,Bike,2024-03-20,controle
+324,Curitiba,Moto,2024-09-20,tratamento
+325,São Paulo,Moto,2025-07-07,tratamento
+326,São Paulo,Bike,2025-03-09,tratamento
+327,São Paulo,Moto,2024-04-05,tratamento
+328,São Paulo,Bike,2024-01-29,tratamento
+329,Rio de Janeiro,Bike,2025-02-10,tratamento
+330,Belo Horizonte,Carro,2024-11-19,controle
+331,Rio de Janeiro,Carro,2025-11-03,tratamento
+332,São Paulo,Moto,2024-12-31,controle
+333,São Paulo,Moto,2025-10-14,tratamento
+334,Rio de Janeiro,Bike,2024-05-30,tratamento
+335,São Paulo,Carro,2024-11-09,controle
+336,Salvador,Moto,2024-04-07,tratamento
+337,São Paulo,Moto,2025-02-05,controle
+338,Rio de Janeiro,Moto,2024-05-11,tratamento
+339,Rio de Janeiro,Moto,2024-12-10,controle
+340,Rio de Janeiro,Bike,2024-08-28,tratamento
+341,São Paulo,Moto,2024-05-10,controle
+342,São Paulo,Bike,2024-03-08,tratamento
+343,Recife,Bike,2024-12-24,tratamento
+344,São Paulo,Bike,2025-10-25,tratamento
+345,Belo Horizonte,Moto,2024-05-19,tratamento
+346,Rio de Janeiro,Moto,2024-10-10,tratamento
+347,Rio de Janeiro,Bike,2024-06-06,tratamento
+348,Rio de Janeiro,Bike,2025-07-20,controle
+349,Salvador,Moto,2024-10-17,tratamento
+350,Recife,Carro,2025-11-13,controle
+351,São Paulo,Moto,2024-06-20,tratamento
+352,Rio de Janeiro,Carro,2024-02-26,controle
+353,São Paulo,Moto,2025-02-11,tratamento
+354,Rio de Janeiro,Moto,2025-04-01,tratamento
+355,Salvador,Moto,2025-11-24,controle
+356,São Paulo,Moto,2025-09-01,tratamento
+357,Rio de Janeiro,Moto,2025-09-10,tratamento
+358,Curitiba,Moto,2025-03-19,tratamento
+359,São Paulo,Moto,2024-09-08,controle
+360,Rio de Janeiro,Bike,2024-10-27,tratamento
+361,Salvador,Moto,2024-04-03,tratamento
+362,São Paulo,Bike,2024-10-28,controle
+363,São Paulo,Bike,2024-09-12,controle
+364,São Paulo,Moto,2024-01-26,controle
+365,Curitiba,Moto,2024-05-23,tratamento
+366,São Paulo,Carro,2025-01-09,controle
+367,São Paulo,Bike,2024-09-15,tratamento
+368,São Paulo,Moto,2025-11-26,tratamento
+369,São Paulo,Bike,2024-11-30,controle
+370,Belo Horizonte,Moto,2025-11-02,tratamento
+371,São Paulo,Moto,2025-04-07,tratamento
+372,Belo Horizonte,Bike,2024-01-29,controle
+373,Belo Horizonte,Moto,2024-05-22,controle
+374,Recife,Bike,2025-05-09,controle
+375,São Paulo,Moto,2025-01-16,controle
+376,Recife,Bike,2024-07-30,controle
+377,Belo Horizonte,Moto,2024-12-31,tratamento
+378,São Paulo,Moto,2025-09-24,controle
+379,Salvador,Moto,2024-09-29,controle
+380,Recife,Moto,2024-02-01,tratamento
+381,São Paulo,Bike,2024-08-05,tratamento
+382,Curitiba,Moto,2025-10-17,tratamento
+383,Rio de Janeiro,Moto,2025-06-17,tratamento
+384,Belo Horizonte,Moto,2025-08-09,controle
+385,Curitiba,Moto,2025-09-30,controle
+386,Rio de Janeiro,Bike,2024-03-23,tratamento
+387,Recife,Moto,2024-07-16,tratamento
+388,Rio de Janeiro,Carro,2024-02-11,tratamento
+389,Salvador,Moto,2024-01-04,controle
+390,Belo Horizonte,Bike,2025-08-07,tratamento
+391,São Paulo,Moto,2025-10-17,tratamento
+392,Rio de Janeiro,Moto,2024-04-19,controle
+393,Rio de Janeiro,Carro,2025-05-20,tratamento
+394,São Paulo,Carro,2025-01-09,tratamento
+395,São Paulo,Carro,2024-02-18,controle
+396,Rio de Janeiro,Moto,2025-10-03,controle
+397,São Paulo,Moto,2025-09-01,tratamento
+398,São Paulo,Bike,2025-02-01,controle
+399,Salvador,Moto,2025-05-10,controle
+400,Salvador,Bike,2024-10-05,controle
